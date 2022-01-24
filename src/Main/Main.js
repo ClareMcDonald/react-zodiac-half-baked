@@ -11,7 +11,7 @@ export default function Main(props) {
       {/* for each item in the `zodiacs` array props, render a ZodiacCard component, passing in the name and the dates as props to the ZodiacCard component */}
       {/* remember that when you map over an array and render out a list, each item in the list needs a unique 'key' prop */}
       {props.zodiacs.map((zodiac, i) => 
-        <ZodiacCard key={zodiac + i} name={zodiac.name} dates={zodiac.dates} />)
+        <ZodiacCard key={zodiac.name + i} name={zodiac.name} dates={zodiac.dates} />)
       }
     </main>
   )
